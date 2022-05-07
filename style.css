@@ -16,6 +16,7 @@
   --brand-beige: hsl(39, 100%, 97%);
   --brand-light: hsl(148, 23%, 89%);
   --bg-light: hsl(180, 14%, 97%);
+  --brand-dark: hsl(170, 100%, 14%);
 
   --nav-height: 7.2rem;
 }
@@ -40,9 +41,9 @@ body {
 }
 
 /*Tamanho imagem para ser padrão. 100% do pai*/
-/* img {
+img {
   max-width: 100%;
-} */
+}
 
 .wrapper {
   width: 37.5rem;
@@ -92,6 +93,36 @@ section .content p {
   font-size: 1.6rem;
 }
 
+.button {
+  background: var(--primary-color);
+
+  border: none;
+  border-radius: 4rem;
+
+  margin-bottom: 6rem;
+  
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+  
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  margin-inline: auto;
+}
+
+.button:hover {
+  background: var(--brand-dark);
+  transition: background 200ms;
+  cursor: pointer;
+}
+
 /* ========== HEADER ================ */
 
 #home::before {
@@ -117,25 +148,7 @@ section .content p {
   margin-bottom: 3.2rem;
 }
 
-#home button {
-  background: var(--primary-color);
-  border: none;
-  border-radius: 4rem;
-  margin-bottom: 6rem;
-  height: 6.2rem;
-  /* width: 26.3rem; */
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 700;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  margin-left: auto;
-  margin-right: auto;
-}
+/* =========== STATS ============== */
 
 #home img {
   width: 26.4rem;
@@ -143,9 +156,6 @@ section .content p {
   margin-inline: auto;
   object-position: 0 2rem;
 }
-
-
-/* =========== STATS ============== */
 
 #home .stats {
   width: 32.7rem;
@@ -291,6 +301,13 @@ body.menu-expanded .menu {
   margin-bottom: 8rem;
 }
 
+.menu .button:hover {
+  background-color: var(--brand-dark);
+  color: white;
+  cursor: pointer;
+  filter: brightness(1);
+} 
+
 .social-links {
   display: flex;
   gap: 3.2rem;
@@ -353,4 +370,84 @@ body.menu-expanded button path{
 
 #about .content img {
   margin-top: 6rem;
+}
+
+/* ========= CONTACT ============ */
+
+#contact {
+  text-align: left;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+/* ========= FOOTER ============ */
+
+
+footer {
+  background-color: var(--primary-color);
+
+  padding-block: 6rem;
+  text-align: left;
+
+  color: white;
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+footer .logo svg {
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+footer .logo path{
+  fill: white;
+}
+
+footer p {
+  color: var(--brand-beige);
+  line-height: 2;
+
+  margin-bottom: 3.2rem;
+}
+
+footer .social-links {
+  justify-content: flex-start;
+}
+
+/* ========= BACK TO TOP ============ */
+
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 300ms; /* Definição do tempo de transição*/
+  transform: translateY(100%); /* O que fazer na transição no eixo Y*/
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /*Com a classe volta a posição no Y 0*/
 }
