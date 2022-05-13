@@ -674,7 +674,7 @@ footer .social-links {
   /* ========= SERVICES ========*/
 
   #services h2 {
-    width: 47rem;
+    width: 50rem;
     margin-inline: auto;
   }
 
@@ -689,7 +689,7 @@ footer .social-links {
   }
 
   /* ========= ABOUT========*/
-
+ 
   #about .wrapper { 
     grid-template-columns: 48rem 1fr;
     grid-template-areas: 'B A';
@@ -714,6 +714,10 @@ footer .social-links {
 
   #contact h2 {
     width: 40.4rem;
+  }
+
+  #contact a.button{
+    margin-left: 0;
   }
 
   /* ========= CONTACT ========*/
